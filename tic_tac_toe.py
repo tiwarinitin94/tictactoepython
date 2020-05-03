@@ -19,19 +19,20 @@ def isValidCheck(x,y):
 
 def checkLeftRight(x,z):
     for y in range(2):
-        if(a[x][0] == z and a[x][1]==z and a[x][2]==z ):
-            return True
-        else:
+        if(a[x][y] != z):
+            
             return False
+
+    return True
 
 def checkUpDown(y, z):
     for x in range(2):
-        if(a[0][y]==z and a[1][y]==z and a[2][y]==z):
-            return True
-        else:
+        if(a[x][y]!=z ):
             return False
 
-def checkDaigonal(x,y,z):
+    return False
+
+def checkDiagonal(x,y,z):
     if (x==1 and y==1) or (x==0 and y==2) or (x==2 and y==0) or (x==0 and y==0) or (x==2 and y==2):
         if(a[1][1]==z and a[0][2]==z and a[2][0]==z):
             return True
